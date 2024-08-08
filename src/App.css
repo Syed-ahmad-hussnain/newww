@@ -1,0 +1,55 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: poppins,
+}
+/* tailwind.css or global.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-custom-gradient;
+  }
+  .text-purple{
+    background: #4F378B;
+
+  }
+}
+
+@keyframes boxReveal {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+.reveal-container {
+  overflow: hidden;
+}
+
+.reveal-box {
+  display: inline-block;
+  animation: boxReveal 1s ease-in-out forwards;
+}
+#root {
+  overflow-x: hidden;
+}
+/* body{
+  padding: 5px;
+} */
+ /* Refined Custom Scrollbar Styles */
+ .scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
